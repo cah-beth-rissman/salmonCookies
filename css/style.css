@@ -1,14 +1,14 @@
 
-body {
+/* body {
     font-family: 'Lobster', cursive;
     
   }
   
   h1 {
     font-size: 34px;
-  }
+  } */
 
-/* header {
+header {
     background-color: aliceblue;
     color: black
 }
@@ -148,4 +148,4 @@ img {
     background-color: #4397e4;
     margin: 0px 10px 10px 0px;
     text-align: center;
-} */
+}
