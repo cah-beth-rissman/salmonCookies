@@ -8,6 +8,18 @@
     font-size: 34px;
   } */
 
+  table, td, th {
+    background-color: #ffebe9;
+    border: solid #fa8072; 2px;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+  }
+table {
+    margin-left: 100px;
+  }  
+  tr:hover    {background-color: coral;}
+
 header {
     background-color: aliceblue;
     color: black

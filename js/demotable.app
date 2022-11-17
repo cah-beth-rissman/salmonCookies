@@ -1,3 +1,5 @@
+
+
 'use strict';
 console.log ('Hello from the js file');
 
@@ -150,4 +152,3 @@ for (let i=0; i<locationInfo.length; i++){
 
 }
 renderTableFooter();
-
