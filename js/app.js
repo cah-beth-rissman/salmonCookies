@@ -15,7 +15,7 @@ function StoreLocation (location, min, max, avgCookies) {
   this.maxCustomersPerHour = max;
   this.avgCookiesPerSale = avgCookies;
   this.hourlyArray = [];
-  this.cookieTotal=0;
+  this.cookieTotal = 0;
 }
 
 
@@ -104,7 +104,7 @@ function renderTableFooter () {
   for (let i = 0; i < hoursOfDay; i++) {
     let cookieRowTotal = 0;
     // add up each index from all locations
-    for (let j = 0; j < locationInfo.length; j++) {
+    for (let j = 0; j < locationInfo.length; j++) {i'm n
       cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
 
