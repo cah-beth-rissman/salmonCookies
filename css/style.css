@@ -1,15 +1,67 @@
+body {
+    margin: auto;
+    width: 1500px;
+    background-color: #fee9e6;
+    cursor: pointer;
+}
 
-/* body {
-    font-family: 'Lobster', cursive;
+.navigation {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    cursor: pointer;
+    color: darkred;
+    text-decoration: none;
+}
+
+header {
+    background-color: lightsalmon;
+    color: darkred
     
-  }
-  
-  h1 {
-    font-size: 34px;
-  } */
+
+}
+h1 {
+    /* clear: both; */
+    font-size: 5em;
+    padding: 4px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 2em;
+    padding: 10px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+.salImage { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 150px;
+}
+.footer p {
+    color: darkred;
+    /* border: 8px solid 	 #fa7a6b; */
+    padding: 10px;
+    margin: 2px;
+    margin-left:25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
 
 table {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
     border-collapse: collapse;
     width: 100%;
   }
@@ -27,147 +79,22 @@ table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: salmon;
     color: white;
   }
-header {
-    background-color: aliceblue;
-    color: black
-}
 
-main {
-    background-color: rgb(250, 128, 114);
-    color: #000000;
-    border: 8px solid 	 #fa7a6b;
-    padding: 10px;
-    margin: 4px;
-    margin-left: 160px;
-    font-family: 'Tangerine';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-align: justify;
-    text-decoration: none;
-    text-transform: none;
-    position: relative;
-    cursor: pointer;
-    float: left;
-  }
-  
-body {
-    margin: auto;
-    width: 1500px;
-    padding: 100px;
-    background-color: #fee9e6;
-    color:#303655;
-    border: 8px solid 	 #fa7a6b;
-    font-family: 'times new roman';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-align: left;
-    cursor: pointer;
-}
 
-h1 {
-    clear: both;
-    font-size: 5em;
-    padding: 10px;
-    margin: 4px;
-    font-family: 'times new roman';
-    font-style: ;
-    font-weight: normal;
-    font-variant: normal;
-    text-align: center;
-    cursor: pointer;
-    color: whitesmoke;
-}
 
-h2 {
-    font-size: 2em;
-    padding: 10px;
-    margin: 4px;
-    font-family: 'times new roman';
-    text-align: left;
-    cursor: pointer;
-    color: white;
-}
 
-p {
-    clear: both;
-    font-size: 1em;
-    padding: 3px;
-    margin: 5px;
-    font-family: 'times new roman';
-    font-style: light;
-    font-weight: normal;
-    font-variant: normal;
-    text-align: left;
-    cursor: pointer;
-    color: navy;
-}
 
-footer {
-    background-color: #6F90AF;
-    height: px;
-    clear: both;
-    color:#303655;
-    border: 8px solid #a5c4e0;
-    padding: 2px;
-    margin: 20px;
-    margin-left: 65px;
-    font-family: 'times new roman';
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-align: left;
-    cursor: pointer;
-    width: 90%;
-}
 
-li {
-    margin: 25px;
-}
 
-ul {
-    margin: 0px;
-    padding-left: 1px;
-    color: navy
-}
 
-ol {
-    list-style-type: none;
-    counter-reset: item;
-    /* display: inline; */
-    text-align: center;
-    margin: 30px;
-    padding-top: 10px;
-    padding-left: 50x;
-    border-radius: 15px;
-    color: whitesmoke;
-}
 
-img {
-    border-radius: 50%;
-    max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    opacity: 0.75;
-}
 
-.info {
-    height: 30px;
-    width: 30%;
-    background-color: #4397e4;
-    margin: 0px 00px 00px 00px;
-}
 
-#topten {
-    height: 35px;
-    width: 100%;
-    background-color: #4397e4;
-    margin: 0px 10px 10px 0px;
-    text-align: center;
-}
+
+
+
+
+
