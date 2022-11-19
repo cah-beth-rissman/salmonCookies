@@ -110,9 +110,13 @@ function renderTableFooter () {
 
   // to look at 14 hours of the day for 14 totals cells
   for (let i = 0; i < hoursOfDay; i++) {
+    // declare variable and assign it to 0;
     let cookieRowTotal = 0;
     // add up each index from all locations
-    for (let j = 0; j < locationInfo.length; j++) {i
+    for (let j = 0; j < locationInfo.length; j++) {
+
+      console.log('stores cookies for per ',locationInfo[j].hourlyArray[i]);
+      cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
       cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
 
@@ -159,5 +163,5 @@ for (let i = 0; i < locationInfo.length; i++) {
   locationInfo[i].renderTableData();
 }
 
-// renderTableFooter();
+renderTableFooter();
 
