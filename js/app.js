@@ -18,7 +18,7 @@ function StoreLocation (location, min, max, avgCookies) {
   this.cookieTotal = 0;
 }
 
-
+// return random number and place in this.hourlyArray
 StoreLocation.prototype.generateCookiesPerHour = function () {
   let min = this.minCustomersPerHour;
   let max = this.maxCustomersPerHour;
@@ -32,7 +32,7 @@ StoreLocation.prototype.cookiePurchased= function (){
   for (let i = 0; i < hours.length; i++){
     // store hourly cookie totals based on num customers per hour
     this.hourlyArray[i]= Math.floor(this.generateCookiesPerHour() * this.avgCookiesPerSale);
-    // daily store cookie total
+    // daily store cookie total and we reassigned the value to a new variable 
     let cookieForThisHour = this.hourlyArray[i];
     this.cookieTotal = this.cookieTotal + cookieForThisHour;
     //console.log(this.hourlyArray);
@@ -56,12 +56,17 @@ StoreLocation.prototype.renderTableData = function () {
   // cookie data x 14
   for (let i = 0; i < hours.length; i++) {
     tableDataCell = document.createElement('td');
+    // use our hourly cookie totals
     tableDataCell.textContent = this.hourlyArray[i];
+    // location first from above, then add the cookie numbers
     row.appendChild(tableDataCell);
   }
 
+  // creating table data cell html element <td></td>
   tableDataCell = document.createElement('td');
+  // html element <td>this.cookieTtotal</td>
   tableDataCell.textContent = this.cookieTotal;
+  // get it out to the html page
   row.appendChild(tableDataCell);
 
   table.appendChild(row);
@@ -93,8 +98,11 @@ renderTableHeaders();
 
 
 function renderTableFooter () {
+  // grab the the table after it has a header and body
   let table = document.getElementById('salesData');
+  // create a table row
   let row = document.createElement('tr');
+  // creating <td> or tfoot?
   let tableFootCell = document.createElement('th');
   let hoursOfDay = hours.length;
   tableFootCell.textContent = 'Totals';
@@ -104,7 +112,7 @@ function renderTableFooter () {
   for (let i = 0; i < hoursOfDay; i++) {
     let cookieRowTotal = 0;
     // add up each index from all locations
-    for (let j = 0; j < locationInfo.length; j++) {i'm n
+    for (let j = 0; j < locationInfo.length; j++) {i
       cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
 
@@ -133,21 +141,23 @@ function renderTableFooter () {
 
 
 // using an array to get info and pass them into constructor
-let seattleInfo=new StoreLocation('Seattle', 23, 65, 6.3);
-let tokyoInfo=new StoreLocation('Tokoyo', 3, 24, 1.2);
-let dubaiInfo=new StoreLocation('Dubai', 11, 38, 3.7);
-let parisInfo=new StoreLocation('Paris', 20, 38, 2.3);
-let limaInfo=new StoreLocation('Lima', 2,16,4.6);
+let seattleInfo = new StoreLocation('Seattle', 23, 65, 6.3);
+let tokyoInfo = new StoreLocation('Tokoyo', 3, 24, 1.2);
+let dubaiInfo = new StoreLocation('Dubai', 11, 38, 3.7);
+let parisInfo = new StoreLocation('Paris', 20, 38, 2.3);
+let limaInfo = new StoreLocation('Lima', 2,16,4.6);
 
-let locationInfo=[seattleInfo,tokyoInfo, dubaiInfo, parisInfo, limaInfo];
+// storing our store objects so we can iterate on them.
+let locationInfo = [seattleInfo,tokyoInfo, dubaiInfo, parisInfo, limaInfo];
+console.log('stores ' ,locationInfo);
 
 // Replace the lists of your data for each store and build a single table of data instead.
 
-for (let i=0; i<locationInfo.length; i++){
-  locationInfo[i].generateCookiesPerHour();
+for (let i = 0; i < locationInfo.length; i++) {
+  // locationInfo[i].
   locationInfo[i].cookiePurchased();
   locationInfo[i].renderTableData();
-
 }
-renderTableFooter();
+
+// renderTableFooter();
 
