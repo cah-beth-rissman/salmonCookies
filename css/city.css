@@ -1,0 +1,60 @@
+body {
+    margin: auto;
+    width: 1500px;
+    background-color: #fee9e6;
+    cursor: pointer;
+}
+
+.navigation {
+    font-size: 16px;
+    padding: 4px;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    color: darkred;
+    text-decoration: none;
+}
+
+header {
+    background-color: lightsalmon;
+    color: darkred
+    
+
+}
+h3 {
+    font-size: 5em;
+    padding: 4px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.city {
+    font-size: 2em;
+    padding: 4px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    color: darkred;
+}
+
+footer {
+    padding-top: 40px;
+
+}
+
+.footer p {
+    color: darkred;
+    /* border: 8px solid 	 #fa7a6b; */
+    padding: 10px;
+    margin: 2px;
+    margin-left:25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}

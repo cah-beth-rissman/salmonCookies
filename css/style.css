@@ -23,7 +23,6 @@ header {
 
 }
 h1 {
-    /* clear: both; */
     font-size: 5em;
     padding: 4px;
     margin: 4px;
@@ -54,7 +53,7 @@ h2 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: darkred;
-    background-image: url('images/family.jpg') ;
+
 }
 .info img {
     float: right;
@@ -138,8 +137,19 @@ table th {
     padding: 10px;
 
 }
+.franchise h3{
+    font-size: 2em;
+    padding: 10px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: darkred;
 
-
+}
+.franchise p {
+    font-size: 1em;
+    background-color: lightsalmon;
+}
 
 
 
