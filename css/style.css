@@ -132,7 +132,12 @@ table th {
     background-color: salmon;
     color: white;
   }
+.form {
+    margin: 0px;
+    margin-top: 10px;
+    padding: 10px;
 
+}
 
 
 

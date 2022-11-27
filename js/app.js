@@ -163,15 +163,13 @@ function handleForm(event) {
   //updates table with new totals:
   renderTableFooter();
 
+
   // form buttons
   //make sure form clear out and resets on submit.
   let locationForm = document.getElementById('newLocation');
   locationForm.reset();
 
 }
-
-
-
 
 
 
