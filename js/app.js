@@ -32,7 +32,7 @@ StoreLocation.prototype.cookiePurchased= function (){
   for (let i = 0; i < hours.length; i++){
     // store hourly cookie totals based on num customers per hour
     this.hourlyArray[i]= Math.floor(this.generateCookiesPerHour() * this.avgCookiesPerSale);
-    // daily store cookie total and we reassigned the value to a new variable
+    // daily store cookie total 
     let cookieForThisHour = this.hourlyArray[i];
     this.cookieTotal = this.cookieTotal + cookieForThisHour;
     //console.log(this.hourlyArray);
@@ -108,16 +108,12 @@ function renderTableFooter () {
   tableFootCell.textContent = 'Totals';
   row.appendChild(tableFootCell);
 
-  // to look at 14 hours of the day for 14 totals cells
+  // to look at 14 hours of the day for 14 total cells
   for (let i = 0; i < hoursOfDay; i++) {
-    // declare variable and assign it to 0;
     let cookieRowTotal = 0;
-    // add up each index from all locations
     for (let j = 0; j < locationInfo.length; j++) {
 
-      // console.log('stores cookies for per ',locationInfo[j].hourlyArray[i]);
-      // cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
-      // cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
+      cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
 
     tableFootCell = document.createElement('td');
@@ -203,6 +199,6 @@ renderTableFooter();
 
 //get element
 let locationForm = document.getElementById('newLocation');
-console.log('newLocation:', locationForm);
+console.log('newLocation', locationForm);
 //add an event listener
 locationForm.addEventListener('submit', handleForm);
