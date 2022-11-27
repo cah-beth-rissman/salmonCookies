@@ -32,7 +32,7 @@ StoreLocation.prototype.cookiePurchased= function (){
   for (let i = 0; i < hours.length; i++){
     // store hourly cookie totals based on num customers per hour
     this.hourlyArray[i]= Math.floor(this.generateCookiesPerHour() * this.avgCookiesPerSale);
-    // daily store cookie total and we reassigned the value to a new variable 
+    // daily store cookie total and we reassigned the value to a new variable
     let cookieForThisHour = this.hourlyArray[i];
     this.cookieTotal = this.cookieTotal + cookieForThisHour;
     //console.log(this.hourlyArray);
@@ -115,9 +115,9 @@ function renderTableFooter () {
     // add up each index from all locations
     for (let j = 0; j < locationInfo.length; j++) {
 
-      console.log('stores cookies for per ',locationInfo[j].hourlyArray[i]);
-      cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
-      cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
+      // console.log('stores cookies for per ',locationInfo[j].hourlyArray[i]);
+      // cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
+      // cookieRowTotal = cookieRowTotal + locationInfo[j].hourlyArray[i];
     }
 
     tableFootCell = document.createElement('td');
@@ -137,7 +137,42 @@ function renderTableFooter () {
   table.appendChild(row);
 }
 
+// form handler
+function handleForm(event) {
+  event.preventDefault();
 
+  let locationElement = document.getElementById('location');
+  let locationValue = locationElement['value'];
+
+  let minCustomersPerHourElement = document.getElementById('minCustomersPerHour');
+  let minCustomersPerHourValue = Number(minCustomersPerHourElement['value']);
+
+  let maxCustomersPerHourElement = document.getElementById('maxCustomersPerHour');
+  let maxCustomersPerHourValue = Number(maxCustomersPerHourElement['value']);
+
+  let avgCookiesPerSaleElement = document.getElementById('avgCookiesPerSale');
+  let avgCookiesPerSaleValue = Number(avgCookiesPerSaleElement['value']);
+
+  //remove old totals in footer
+  let OldtableTableFooter = document.getElementById('footer');
+  OldtableTableFooter.remove();
+
+  //create the new location
+  // use our constructor
+  let newLocation= new StoreLocation(locationValue, minCustomersPerHourValue, maxCustomersPerHourValue, avgCookiesPerSaleValue);
+  //update cookies per hour and render new table row
+  newLocation.generateCookiesPerHour();
+  newLocation.cookiePurchased();
+  newLocation.renderTableData();
+  //updates table with new totals:
+  renderTableFooter();
+
+  // form buttons
+  //make sure form clear out and resets on submit.
+  let locationForm = document.getElementById('newLocation');
+  locationForm.reset();
+
+}
 
 
 
@@ -159,9 +194,15 @@ console.log('stores ' ,locationInfo);
 
 for (let i = 0; i < locationInfo.length; i++) {
   // locationInfo[i].
+  locationInfo[i].generateCookiesPerHour();
   locationInfo[i].cookiePurchased();
   locationInfo[i].renderTableData();
 }
 
 renderTableFooter();
 
+//get element
+let locationForm = document.getElementById('newLocation');
+console.log('newLocation:', locationForm);
+//add an event listener
+locationForm.addEventListener('submit', handleForm);
