@@ -47,6 +47,48 @@ h2 {
     width: 50%;
     padding: 150px;
 }
+.info {
+    font-size: 2em;
+    padding: 10px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: darkred;
+    background-image: url('images/family.jpg') ;
+}
+.info img {
+    float: right;
+    width: 500px;
+    height: 350px;
+    border-radius: 25px;
+
+
+}
+
+.shopping {
+    font-size: 2em;
+    padding: 10px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: darkred;
+
+
+}
+.shopping img{
+
+        border-radius: 25px;
+        border: 2px solid ;
+        padding: 20px;
+        width: 225px;
+        height: 200px;
+
+}
+footer {
+    padding-top: 40px;
+
+}
+
 .footer p {
     color: darkred;
     /* border: 8px solid 	 #fa7a6b; */
@@ -58,6 +100,14 @@ h2 {
     text-align: center;
     cursor: pointer;
     width: 100%;
+}
+.city {
+    font-size: 2em;
+    padding: 20px;
+    margin: 4px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: darkred;
 }
 
 table {
