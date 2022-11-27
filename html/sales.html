@@ -25,6 +25,30 @@
         <header>
 
         </header>
+
+<!-- Form to add new locations to table -->
+
+    <section class="form">
+        <!-- add action and method -->
+        <form id="newLocation"> 
+            <fieldset>
+                <legend>Add Location</legend>
+                <label for="name">City</label>
+                <input type="text" id="location" required><br>
+                <label for="minCustomersPerHour">Minimun number of Customers Per Hour</label>
+                <input type="number" id="minCustomersPerHour" min="0" required><br>
+                <label for="maxCustomersPerHour">Maximum number of Customers Per Hour</label>
+                <input type="number" id="maxCustomersPerHour" min="0" required><br>
+                <label for="avgCookiesPerSale" >Average number of Cookies Per Sale</label>
+                <input type="number" id="avgCookiesPerSale" min="0" required>
+            </fieldset>
+    
+            <section class="locButton">
+                <button type="reset">Reset</button>
+                <button id="submit">Submit</button>
+            </section>
+        </form>
+    </section>
     <main>
 <!-- we are going to grab these ' ids ' from our javascript  -->
         <table id="salesData">
